@@ -1,0 +1,12 @@
+TPEC 2027 Gate 5C pre-solve authority anchor
+
+chronology_id=TPEC_ROUTE_B_2023_C22_C46
+
+lockfile_sha256=84d9ef6c8958843c67e70bfee09b13c7a8574288bcb2a68f09d3f59fb1b8726e
+
+verifier_sha256=cdab1119f965430e14a391c511a213db5cb9131480a68cc07b593f50c88effcb
+
+generator_sha256=30677912638f6aa90caca0637608016d6da43cdc5045c78f25b5958ca539538b
+
+teacher_solves_performed=0
+production_labels_generated=false
