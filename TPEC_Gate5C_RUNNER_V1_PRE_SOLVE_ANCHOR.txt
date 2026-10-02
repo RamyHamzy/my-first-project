@@ -1,0 +1,11 @@
+TPEC 2027 Gate 5C production label runner v1 pre-solve anchor
+
+chronology_id=TPEC_ROUTE_B_2023_C22_C46
+lockfile_sha256=84d9ef6c8958843c67e70bfee09b13c7a8574288bcb2a68f09d3f59fb1b8726e
+runner_filename=TPEC2027_Gate5C_production_label_runner_v1.py
+runner_sha256=bbe84818f798819b8823b406b62a6628f95f3e4723a9d57db3cf7446d19662d4
+freeze_note_sha256=b9754611f23467b3e0840cbab73dc7132a502c7226d21698d57bf10306660f3c
+self_test=PASS_7_OF_7
+compile=PASS
+teacher_solves_performed=0
+production_labels_generated=false
