@@ -1,0 +1,20 @@
+TPEC 2027 Gate 5C Computational-Authority Amendment
+
+chronology_id=TPEC_ROUTE_B_2023_C22_C46
+authority_layer=GATE5C_COMPUTATIONAL_AUTHORITY_AMENDMENT
+amendment_sha256=dfe2d4052a07535505ae7e64248cf9aab0e6745cc06f5930fdca6244112bba08
+
+temporal_cut_method_sha256=33404661933af045bf025a704139da0fb0294a0f37ea21437558da6f50235377
+recovery_runner_sha256=130bfcdf8ce11d2d570babde2700b6f9ffcfcc1257f37560e36d12d06d37b9e7
+highspy_version=1.15.1
+
+envelope_time_limit_s=30
+cut_generation_time_limit_s=120
+cold_cache_per_label=true
+base_model_fallback_allowed=false
+
+teacher_solves_before_anchor=0
+production_authorized=false
+ml_training_authorized=false
+
+purpose=Pre-solve external commitment to the Gate5C computational-authority amendment before native solver qualification.
