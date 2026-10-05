@@ -1,0 +1,11 @@
+TPEC Gate5C production start record
+parent_result_commit=c9ab03f016c07527ca8ca5d3c1575f892c329aeb
+chronology=TPEC_ROUTE_B_2023_C22_C46
+runner_sha256=316087efbab4470364c54069b1892fb0dcf6307b477cb809971e6e7da8720cdb
+review_checkpoint=PASS
+fresh_genesis=true
+start_record_index=0
+q0_void=true
+ml_training=false
+production_run_may_begin=true
+production_complete=false
