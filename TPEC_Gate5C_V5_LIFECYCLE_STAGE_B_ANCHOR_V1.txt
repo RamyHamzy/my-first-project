@@ -1,0 +1,10 @@
+status=V5_LIFECYCLE_STAGE_B_PASS_EXTERNAL_ANCHOR_REQUIRED
+records=8
+record_index=7
+boundary_1_head=56dfa915f5a37bced43c4f9c912fa47562ab0098195af81b11e4eb299916d2d3
+head=3f3bc01ca367441414b32ad1e47ab47a485cba0fc295d1eb92a690e2a203d760
+append_prefix_stable=true
+restart_reuse_verified=true
+native_teacher_solves=0
+production_authorized=false
+ml_training_authorized=false
