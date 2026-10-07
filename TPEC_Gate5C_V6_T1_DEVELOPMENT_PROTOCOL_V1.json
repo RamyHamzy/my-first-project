@@ -1,0 +1,146 @@
+{
+  "authority_parent": {
+    "branch": "gate5c-v6-solver-qualification",
+    "population_anchor_commit": "15050c686d069fec8b9a81dba614a1aceadd15ad",
+    "population_anchor_sha256": "e0654f06ba2031595ba07ea4ad933f944b989652e6e151ced32ca6bf76994fcb"
+  },
+  "candidate_strategies": {
+    "T1_A_BASELINE_1800": {
+      "heuristic_policy": "HIGHS_DEFAULT",
+      "role": "reference baseline; archived V5 hard-case outcomes reused; fresh execution permitted only on DEV24",
+      "time_limit_s": 1800.0
+    },
+    "T1_B_BASELINE_3600": {
+      "heuristic_policy": "HIGHS_DEFAULT",
+      "time_limit_s": 3600.0
+    },
+    "T1_C_PROOF_FOCUS_1800": {
+      "heuristic_policy": "SUPPRESSED",
+      "mip_heuristic_effort": 0.0,
+      "mip_heuristic_run_feasibility_jump": false,
+      "mip_heuristic_run_rens": false,
+      "mip_heuristic_run_rins": false,
+      "mip_heuristic_run_root_reduced_cost": false,
+      "mip_heuristic_run_shifting": false,
+      "mip_heuristic_run_zi_round": false,
+      "time_limit_s": 1800.0
+    },
+    "T1_D_PROOF_FOCUS_3600": {
+      "heuristic_policy": "SUPPRESSED",
+      "mip_heuristic_effort": 0.0,
+      "mip_heuristic_run_feasibility_jump": false,
+      "mip_heuristic_run_rens": false,
+      "mip_heuristic_run_rins": false,
+      "mip_heuristic_run_root_reduced_cost": false,
+      "mip_heuristic_run_shifting": false,
+      "mip_heuristic_run_zi_round": false,
+      "time_limit_s": 3600.0
+    }
+  },
+  "common_solver_settings": {
+    "mip_abs_gap": 0.01,
+    "mip_rel_gap": 1e-06,
+    "parallel": "off",
+    "presolve": "on",
+    "random_seed": 0,
+    "threads": 1
+  },
+  "frozen_scientific_dependencies": {
+    "highspy_version": "1.15.1",
+    "input_sha256": "260e3f4ea97a3e06ea3f4de3191d5071997131f8e56e83a59ff7dd711ec829ad",
+    "recovery_runner_sha256": "130bfcdf8ce11d2d570babde2700b6f9ffcfcc1257f37560e36d12d06d37b9e7",
+    "teacher_oracle_sha256": "3a06bf6358b1e15f32a1ae645707f20afd0fdbcd0ff01cf277dd91badc2ab58c",
+    "temporal_cut_method_sha256": "33404661933af045bf025a704139da0fb0294a0f37ea21437558da6f50235377"
+  },
+  "ml_training_authorized": false,
+  "population_authority": {
+    "dev24_sha256": "044c56adde23ca4557d1bf7c91c8f5c366ba14be619e5d6667fa254d59465340",
+    "qual48_sha256": "37a6b5cae85bce53961541f76792936b584928c824c17d8a3871a33ec1bd2d84",
+    "qual48_status": "SEALED_UNTOUCHED_NO_SOLVES_ALLOWED_DURING_DEVELOPMENT"
+  },
+  "production_authorized": false,
+  "prohibitions": [
+    "no state-specific solver settings",
+    "no retries of unresolved development outcomes",
+    "no replacement of failed development states",
+    "no alteration of DEV24 or QUAL48 membership",
+    "no QUAL48 solve before global solver configuration freeze",
+    "no scientific model change inside this protocol",
+    "no tolerance relaxation",
+    "no acceptance of time-limit incumbents",
+    "no reuse of V5 labels as V6 production labels"
+  ],
+  "protocol_version": "TPEC_GATE5C_V6_T1_DEVELOPMENT_PROTOCOL_V1",
+  "qualification_boundary": {
+    "qual48_may_be_solved_during_this_protocol": false,
+    "require_external_anchor_before_qual48": true,
+    "require_new_global_solver_configuration_freeze_before_qual48": true
+  },
+  "scientific_model_semantics": {
+    "C_long_horizon": "UNCHANGED",
+    "T1_acceptance": "native_Optimal_AND_residual_physical_checks_AND_(relative_gap<=1e-6_OR_absolute_gap<=0.01_kWh)",
+    "T1_objective": "min_explicit_firming_energy_UNCHANGED",
+    "physical_teacher": "UNCHANGED",
+    "service_relaxation_allowed": false,
+    "state_substitution_allowed": false,
+    "temporal_cut_method": "UNCHANGED",
+    "time_limit_incumbent_admissible": false
+  },
+  "stage_1_forensic_screen": {
+    "baseline_A": "DO_NOT_RERUN; use archived V5 forensic outcomes",
+    "candidates_to_execute": [
+      "T1_B_BASELINE_3600",
+      "T1_C_PROOF_FOCUS_1800",
+      "T1_D_PROOF_FOCUS_3600"
+    ],
+    "cases": [
+      "EP_20230104_S0",
+      "EP_20230110_S1",
+      "EP_20230110_S2",
+      "EP_20230113_S1",
+      "EP_20230213_S0",
+      "EP_20230213_S1",
+      "EP_20230307_S0",
+      "EP_20230307_S1",
+      "EP_20230307_S2"
+    ],
+    "diagnostic_only_fields": [
+      "native_model_status",
+      "elapsed_s",
+      "incumbent_objective_cTx_if_available",
+      "dual_bound_if_available",
+      "relative_gap",
+      "absolute_gap_kwh",
+      "node_count",
+      "bound_residual",
+      "integrality_residual",
+      "linear_residual"
+    ],
+    "eligibility_rule": "candidate must achieve 9_of_9 T1_ADMISSIBLE",
+    "execution_rule": "each candidate exactly once on every listed case; no retries",
+    "purpose": "development-only discrimination of global T1 strategies",
+    "winner_rule": [
+      "retain only candidates with 9_of_9 T1_ADMISSIBLE",
+      "if none: STOP_AND_OPEN_NEW_PREDECLARED_COMPUTATIONAL_AMENDMENT",
+      "if multiple: choose lowest total elapsed seconds over the nine cases",
+      "if still tied: choose lexicographically smallest strategy ID"
+    ]
+  },
+  "stage_2_dev24_validation": {
+    "advancement_rule": "STAGE_1_WINNER must achieve 24_of_24 T1_ADMISSIBLE",
+    "baseline_role": "diagnostic non-regression comparator only",
+    "execution_rule": "each strategy exactly once per DEV24 state; no retries",
+    "failure_rule": "if winner is below 24_of_24, STOP; QUAL48 remains untouched",
+    "population": "V6_solver_development_24_states.csv",
+    "strategies_to_execute": [
+      "T1_A_BASELINE_1800",
+      "STAGE_1_WINNER"
+    ]
+  },
+  "status": "FROZEN_BEFORE_FIRST_V6_T1_DEVELOPMENT_SOLVE",
+  "t2_status": {
+    "development_in_this_protocol": false,
+    "final_v6_T2_setting": "NOT_YET_FROZEN",
+    "prior_evidence": "Gate4D supports 3600_s as a candidate T2 proof budget"
+  }
+}
